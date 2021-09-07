@@ -39,14 +39,14 @@ https://eu.finalfantasy.com/topics of https://eu.finalfantasy.com/topics/306
 #### Screenshot(s) van de eerste pagina (small screen):
 
 hier de naam van de pagina  
-<img src="images/ff14-homepage.jpg" width="375px" alt="Final Fantasy 14 homepage">
+<img src="images/ff14-homepage.JPG" width="375px" alt="Final Fantasy 14 homepage">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 
 hier de naam van de pagina  
-<img src="images/ff14-topics.jpg" width="375px" alt="Final Fantasy 14 topics pagina">
+<img src="images/ff14-topics.JPG" width="375px" alt="Final Fantasy 14 topics pagina">
 of
-<img src="images/ff14-topic-1september.jpg" width="375px" alt="Final Fantasy 14 topic pagina 1 september">
+<img src="images/ff14-topic-1september.JPG" width="375px" alt="Final Fantasy 14 topic pagina 1 september">
 
 </details>
 
@@ -57,15 +57,15 @@ of
 
 ### de hele pagina:
 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="./images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu):
 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+<img src="./images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 ### wellicht nog een dynamisch deel (bijv filter):
 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+<img src="./images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
