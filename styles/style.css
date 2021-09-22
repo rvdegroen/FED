@@ -1,10 +1,70 @@
 /* CSS Document */
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box; 
 }
 
 * {
   margin: 0;
   padding: 0;
+} 
+
+/*extra fonts*/
+/*@font-face {
+  font-family: "Final";
+  src: url(./fonts/finalf.ttf);
 }
 
+header {
+  position:sticky;
+  font-family: "Final", serif;
+}
+werkt niet geen idee waarom*/
+
+/*voor alle linkjes, heb ik de onderlijning weeggehaald
+deze past niet bij de huisstijl van de website*/
+a, h2, h3 {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+/*bron: https://kinsta.com/blog/responsive-web-design/#media-queries voor mobiel scherm*/
+@media screen and (max-width:767px){
+  /*styling voor de nav voor op mobiel*/
+  header {
+    position: fixed;
+    background-color:cornflowerblue;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+  }  
+
+  nav {
+  display:flex;
+  flex-direction:column;
+  gap:2em;
+  background-color: pink;
+  height: 100vh;
+  }
+
+  nav ul li {
+    display:flex;
+    border-bottom: 1px solid grey;
+  }
+
+  
+}
+
+/*voor tablet of een medium scherm*/
+@media screen and (min-width:768px) and (max-width:1023px){
+
+}
+
+/*voor een groot- of desktop scherm*/
+@media screen and (min-width:1024px){
+
+}

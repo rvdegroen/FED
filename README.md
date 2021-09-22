@@ -39,14 +39,14 @@ https://eu.finalfantasy.com/topics of https://eu.finalfantasy.com/topics/306
 #### Screenshot(s) van de eerste pagina (small screen):
 
 hier de naam van de pagina  
-<img src="images/ff14-homepage.JPG" width="375px" alt="Final Fantasy 14 homepage">
+<img src="./images/readme/ff14-homepage.JPG" width="375px" alt="Final Fantasy 14 homepage">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 
 hier de naam van de pagina  
-<img src="images/ff14-topics.JPG" width="375px" alt="Final Fantasy 14 topics pagina">
+<img src="./images/readme/ff14-topics.JPG" width="375px" alt="Final Fantasy 14 topics pagina">
 of
-<img src="images/ff14-topic-1september.JPG" width="375px" alt="Final Fantasy 14 topic pagina 1 september">
+<img src="./images/readme/ff14-topic-1september.JPG" width="375px" alt="Final Fantasy 14 topic pagina 1 september">
 
 </details>
 
@@ -57,15 +57,15 @@ of
 
 ### de hele pagina:
 
-<img src="./images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="./images/readme/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu):
 
-<img src="./images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+<img src="./images/readme/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 ### wellicht nog een dynamisch deel (bijv filter):
 
-<img src="./images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+<img src="./images/readme/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -76,11 +76,11 @@ of
 
 ### Stand van zaken
 
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik was er deze les/ week niet.
 
 ### Agenda voor meeting
 
-samen met je groepje opstellen
+Agenda voor de meeting is op dit moment n.v.t., omdat ik er deze week niet was.
 
 | student 1      | student 2          | student 3    | student 4        |
 | -------------- | ------------------ | ------------ | ---------------- |
@@ -92,10 +92,7 @@ samen met je groepje opstellen
 
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Ik was er deze les niet dus bij deze staat dit hier niet bij.
 
 </details>
 
