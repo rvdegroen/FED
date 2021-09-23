@@ -3,6 +3,7 @@ var = button
 function(){}
 button.addEventListener("click",function(){})*/
 
-var navButton = document.querySelector("navButton");
+var closeNavButton = document.querySelector("nav button:nth-of-type(2)"),
+    nav = document.querySelector("nav");
 
-navButton
+nav.classList.add(".hideHamburgerMenu");

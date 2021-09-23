@@ -1,4 +1,10 @@
 /* CSS Document */
+:root {
+  --black: black;
+  --shadow: rgba(0,0,0,0.1);
+  --background: white;
+}
+
 *, *::after, *::before {
   box-sizing:border-box; 
 }
@@ -8,54 +14,101 @@
   padding: 0;
 } 
 
-/*extra fonts*/
-/*@font-face {
-  font-family: "Final";
-  src: url(./fonts/finalf.ttf);
-}
-
-header {
-  position:sticky;
-  font-family: "Final", serif;
-}
-werkt niet geen idee waarom*/
-
 /*voor alle linkjes, heb ik de onderlijning weeggehaald
 deze past niet bij de huisstijl van de website*/
-a, h2, h3 {
+a, h1, h2, h3 {
   text-decoration: none;
   text-transform: uppercase;
+  color: var(--black);
 }
 
 body {
   font-family: 'Oswald', sans-serif;
 }
 
+header h1 {
+  padding:.5em;
+}
+
 /*bron: https://kinsta.com/blog/responsive-web-design/#media-queries voor mobiel scherm*/
 @media screen and (max-width:767px){
-  /*styling voor de nav voor op mobiel*/
+  /*styling voor het hamburger menu*/
   header {
-    position: fixed;
-    background-color:cornflowerblue;
-    top:0;
-    right:0;
+    position:fixed;
     width:100%;
     height:100%;
-  }  
+    background-color:var(--white);
+    /*position:fixed; 
+    left:0;
+    bottom:0;*/
+  }
 
+  /*box-shadow aan de onderkant van de h1 voor het hamburger menu*/
+  header h1 {
+    display:flex;
+    flex-grow:1;
+    justify-content:center;
+    box-shadow: 0px 5px 5px  var(--shadow); 
+    
+  }
+
+  /*navigatie*/
   nav {
-  display:flex;
-  flex-direction:column;
-  gap:2em;
-  background-color: pink;
-  height: 100vh;
+    background-color:var(--white);
+    position:fixed;
+    top:5em;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    margin-top:1em;
+  }
+
+  /*language*/
+  nav h2 {
+    display:flex;
+    justify-content:center;
+    margin: .75em 0; 
   }
 
   nav ul li {
+    list-style-type: none;
+    padding:1em;
+    padding-left:2em;
+    border-bottom: 2px solid rgba(99, 34, 34, 0.1);
+  }
+  
+  /*de list met de talen erin/ languages*/
+  /*nav li:nth-last-of-type(2) {
+
+  }*/
+  
+  /*div om de button heen, omdat de nav de parent van button is, 
+  maar daar staat display:fixed up en ik wil flex om deze 
+  makkelijk te kunnen centreren*/
+  nav div {
     display:flex;
-    border-bottom: 1px solid grey;
+    justify-content:center;
   }
 
+  /*close buttton in het hamburger menu*/
+  nav button {
+    padding:1.5em;
+    width: 80%;
+    bottom:0;
+    border: 1px solid var(--black);
+    box-shadow: 0px 5px 5px  var(--shadow); 
+    background-color: var(--white);
+  }
+
+  /*.hideHamburgerMenu {
+    transform:translateX(50%);
+  }*/
+  /*einde styling hamburger menu*/
+
+  body {
+    font-size: 1.1em;
+  }
   
 }
 
