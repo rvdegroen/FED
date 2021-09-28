@@ -34,34 +34,39 @@ header h1 {
 @media screen and (max-width:767px){
   /*styling voor het hamburger menu*/
   header {
-    position:fixed;
-    width:100%;
+    background-color: var(--background);
+    position: sticky;
+    top:0;
+    width: 100%;
     height:100%;
-    background-color:var(--white);
-    /*position:fixed; 
-    left:0;
-    bottom:0;*/
+    margin-bottom:1em;
   }
 
   /*box-shadow aan de onderkant van de h1 voor het hamburger menu*/
   header h1 {
     display:flex;
     flex-grow:1;
-    justify-content:center;
-    box-shadow: 0px 5px 5px  var(--shadow); 
-    
+    justify-content:center; 
   }
 
   /*navigatie*/
   nav {
-    background-color:var(--white);
+    background-color:var(--background);
     position:fixed;
-    top:5em;
+    box-shadow: 0px -15px 10px -15px  var(--shadow); 
+    top:3.5em;
     left:0;
     bottom:0;
     width:100%;
     height:100%;
     margin-top:1em;
+  }
+
+  /*voor in js om de nav te verbergen*/
+  .hideNav {
+    transition: .2s;
+    transition-timing-function: ease-in-out;
+    transform: translateX(-100%);
   }
 
   /*language*/
@@ -73,7 +78,7 @@ header h1 {
 
   nav ul li {
     list-style-type: none;
-    padding:1em;
+    padding:.7em;
     padding-left:2em;
     border-bottom: 2px solid rgba(99, 34, 34, 0.1);
   }
@@ -93,7 +98,9 @@ header h1 {
 
   /*close buttton in het hamburger menu*/
   nav button {
-    padding:1.5em;
+    font-size: 1em;
+    margin-top:3em;
+    padding:1em;
     width: 80%;
     bottom:0;
     border: 1px solid var(--black);
@@ -108,6 +115,10 @@ header h1 {
 
   body {
     font-size: 1.1em;
+  }
+
+  img {
+    max-width: 100%;
   }
   
 }

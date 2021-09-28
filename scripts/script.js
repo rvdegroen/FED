@@ -1,9 +1,16 @@
-/*3 regels die we gebruiken:
-var = button
-function(){}
-button.addEventListener("click",function(){})*/
+console.log("test");
 
-var closeNavButton = document.querySelector("nav button:nth-of-type(2)"),
-    nav = document.querySelector("nav");
+var navBtnEl = document.querySelector("nav button"),
+    nav = document.querySelector("nav"),
+    h1Header = document.querySelector("header h1");
 
-nav.classList.add(".hideHamburgerMenu");
+function hideNav() {
+    nav.classList.add("hideNav");
+}
+
+function showNav() {
+    nav.classList.remove("hideNav");
+}
+
+navBtnEl.addEventListener("click", hideNav);
+h1Header.addEventListener("click", showNav);
