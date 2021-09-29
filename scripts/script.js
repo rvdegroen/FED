@@ -2,7 +2,7 @@ console.log("test");
 
 var navBtnEl = document.querySelector("nav button"),
     nav = document.querySelector("nav"),
-    h1Header = document.querySelector("header h1");
+    hamburgerMenu = document.querySelector("header h1 img");
 
 function hideNav() {
     nav.classList.add("hideNav");
@@ -13,4 +13,4 @@ function showNav() {
 }
 
 navBtnEl.addEventListener("click", hideNav);
-h1Header.addEventListener("click", showNav);
+hamburgerMenu.addEventListener("click", showNav);
