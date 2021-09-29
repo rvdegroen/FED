@@ -1,0 +1,7 @@
+﻿// Header部の要素配置と、非同期によるスクエニアカウント情報の取得
+// Ajaxにて行う予定
+
+$(function() {
+    $("#sqexHeader-black_rsp").replaceWith('<header id="sqexHeader-black_rsp"><hgroup id="header-title" class="clearfix"><div class="logo"><a href="https://www.square-enix.com/"><img src="https://www.jp.square-enix.com/common/templates/images/logo-black.gif" alt="SQUARE ENIX"></a></div></hgroup><div id="spOnly"><hgroup id="phone-title"><div class="logo"><a href="https://www.square-enix.com/"><img src="https://www.jp.square-enix.com/common/templates/images/logo_ipn_b.gif" alt="SQUARE ENIX"></a></div></hgroup></div></header>')
+});
+

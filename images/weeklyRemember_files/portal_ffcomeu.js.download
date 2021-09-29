@@ -1,0 +1,71 @@
+﻿// 各タイトルごとにフッタ要素を変更
+// Lightbox的にも出せるようにAJAX化
+$(function(){
+	sqexfooter_loaded();
+});
+
+function sqexfooter_loaded() {
+
+var sqexFooter = {
+    // footer html
+    html: '<div id="sqex-footer-contents">'
+        + '<div id="sqex-footer-contents-inner" class="clearfix">'
+        + '<div class="sqex-footer-shares-wrap clearfix logoless">'//without platform ver, add classname "logoless"
+        + '<dl class="sqex-footer-shares">'
+        + '<dd><a href="javascript:void(0);" class="facebook" onClick="ga(\'send\', \'event\', \'FooterShareButton\', \'Facebook\', location.href);" title="Facebookでシェア"><img src="//www.jp.square-enix.com/common/templates/images/footer/share_fb.png" alt="Facebook" height="25"></a></dd>'
+        + '<dd><a href="javascript:void(0);" class="twitter" onClick="ga(\'send\', \'event\', \'FooterShareButton\', \'twitter\', location.href);" title="Twitterでシェア"><img src="//www.jp.square-enix.com/common/templates/images/footer/share_tw.png" alt="Twitter" height="25"></a></dd>'
+        + '</dl>'
+        + '</div>'//end sqex-footer-shares-wrap
+        + '</div>'//end sqex-footer-contents-inner
+        + '<ul class="clearfix">'
+        + '<li><a href="javascript:void(0);" class="caution">Terms of use</a></li>'
+        + '<li><a href="https://www.jp.square-enix.com/privacy/index_en.html">PrivacyPolicy</a></li>'
+        + '<li><a href="http://support.eu.square-enix.com/jump.php">Support</a></li>'
+        + '</ul>'
+        + '<div class="sqex-footer-copy-logo"><p class="sqex-footer-copyright">&copy; 2018 - 2021 SQUARE ENIX CO., LTD. All Rights Reserved.</p></div>'
+        + '</div>',//end sqex-footer-contents
+
+    // dialog
+    showDialog: function(contents) {
+        $("#sqexFooterDialog").empty().html(contents).dialog({modal:true});
+    }
+
+};
+
+
+    $("#sqexFooter").empty().html(sqexFooter.html);
+	//$(".sqex-footer-black").addClass("column3");
+    $("<div>").attr("id", "sqexFooterDialog").appendTo("body");
+    // dialogs
+    $("#sqexFooterItem, #sqexFooterBuy, #sqexFooter dl.sqex-footer-shares dd a").bind("click", function() {
+        // some ajax code here to fetch contents
+        // show dialog
+        //sqexFooter.showDialog( $(this).attr("class") );
+    })
+    // 著作権について
+    $("#sqexFooter a.caution").bind("click", function() {
+        window.open(
+            'https://www.jp.square-enix.com/caution.html',
+            'winCaution',
+            'toolbar=no,status=no,location=no,directories=no,menubar=no,scrollbars=yes,width=720,height=400'
+        );
+    });
+
+    // Facebook
+    $("#sqexFooter a.facebook").bind("click", function() {
+        window.open(
+            'http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.jp.square-enix.com%2Fcommon%2Fr%2Fshare%2Fportal_ffcomna%2Fr_fb.html&t=FINAL%20FANTASY%20%7c%20SQUARE%20ENIX',
+            'winFacebook',
+            'toolbar=no,status=no,location=no,directories=no,menubar=no,scrollbars=no,width=640,height=360'
+        );
+    });
+    // Twitter
+    $("#sqexFooter a.twitter").bind("click", function() {
+        window.open(
+            'https://twitter.com/intent/tweet?text=FINAL%20FANTASY%20%7c%20SQUARE%20ENIX%20http://sqex.to/yE3',
+            'winTwitter',
+            'toolbar=no,status=no,location=no,directories=no,menubar=no,scrollbars=no,width=640,height=360'
+        );
+    });
+
+}
