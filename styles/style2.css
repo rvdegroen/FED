@@ -1,0 +1,185 @@
+/***********************************
+************custom color************
+************************************/
+
+:root {
+  --text: black;
+  --shadow: rgba(0,0,0,0.1);
+  --background: white;
+}
+
+*, *::after, *::before {
+  box-sizing:border-box; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+} 
+
+/***********************************
+***************algemeen*************
+************************************/
+
+body {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1em;
+  background-color: var(--background);
+}
+
+nav, h1 {
+  background-color:var(--background);
+}
+
+/*De afbeeldingen horen een max-width van 100% over de parent container*/
+/*later kijken: geen idee of dit klopt*/
+img {
+  max-width: 100vw;
+}
+
+header h1 {
+  padding:.5em;
+}
+
+button {
+  font-size: 1em;
+  margin-top:3em;
+  padding:1em;
+  border: 1px solid var(--text);
+  box-shadow: 0px 5px 5px  var(--shadow); 
+  background-color: var(--white);
+}
+
+button:first-of-type {
+  border: solid red;
+  color:red;
+}
+
+/*voor alle linkjes, heb ik de onderlijning weeggehaald deze past niet bij de huisstijl van de website*/
+a, h1, h2, h3 {
+  display: flex;
+  justify-content:center; 
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+/***********************************
+*******advertentie carousel*********
+************************************/
+/*main section:first-of-type {
+  
+}
+
+section:first-of-type > ul > li {
+ 
+}*/
+
+/***********************************
+**************sections *************
+************************************/
+section {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+section:nth-of-type(7) img {
+  height:30%;
+}
+
+/***********************************
+**************articles *************
+************************************/
+article {
+  box-shadow: 0 0 10px 5px var(--shadow);
+  margin:.25em;
+}
+
+/***********************************
+***Opmaak voor het mobiele scherm***
+************************************/
+/*bron voor schermformaten: https://kinsta.com/blog/responsive-web-design/#media-queries*/
+@media screen and (max-width:767px){
+
+/**********hamburger menu**********/
+  header {
+    position: sticky;
+    top:0;
+    width: 100%;
+    height:100%;
+  }
+
+  /*box-shadow aan de onderkant van de h1 voor het hamburger menu*/
+  header h1 {
+    display:flex;
+    justify-content:center; 
+  }
+
+  nav {
+    position:fixed;
+    box-shadow: 0px -15px 10px -15px  var(--shadow); 
+    top:3.8em;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    margin-top:1em;
+  }
+
+  /*voor in js om de nav te verbergen*/
+  .hideNav {
+    transition: .2s;
+    transition-timing-function: ease-in-out;
+    transform: translateX(-100%);
+  }
+
+  /*language h2 in het hamburger menu*/
+  nav h2 {
+    display:flex;
+    justify-content:center;
+    margin-top: 1.2em; 
+  }
+
+  nav ul li {
+    list-style-type: none;
+    padding:.7em;
+    padding-left:2em;
+    border-bottom: 2px solid var(--shadow);
+  }
+
+  /*div om buttons heen, omdat de nav de parent van button is, maar daar staat display:fixed up en ik wil flex om deze makkelijk te kunnen centreren zonder margins te gebruiken*/
+  div {
+    display:flex;
+    justify-content:center;
+  }
+
+  /*close buttton in het hamburger menu*/
+  nav button {
+    width: 80%;
+    bottom:0;
+  }
+
+   /*********section mobiel *********/
+   
+
+  /*********articles mobiel *********/
+  article {
+    grid-column-start: 1;
+    grid-column-end:3;
+  }
+  
+}
+
+/***********************************
+********tablet/medium scherm********
+************************************/
+@media screen and (min-width:768px) and (max-width:1023px){
+
+}
+
+/***********************************
+********groot/desktop scherm********
+************************************/
+@media screen and (min-width:1024px){
+
+}

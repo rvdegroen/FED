@@ -1,178 +1,414 @@
-/***********************************
-************custom color************
-************************************/
-
+/*******CUSTOM COLORS******/
 :root {
-  --text: black;
-  --shadow: rgba(0,0,0,0.1);
-  --background: white;
-}
+    --text: black;
+    --shadow: rgba(0,0,0,0.1);
+    --background: rgb(252, 252, 252);
+    --articleh3: rgb(0, 155, 224);
+    --sectionbg: #EEEEEE;
+    --timedate: #002c66;
+  }
 
+/******code dat overal geldt******/
 *, *::after, *::before {
-  box-sizing:border-box; 
+    box-sizing:border-box; 
 }
 
-* {
-  margin: 0;
-  padding: 0;
-} 
-
-/***********************************
-***************algemeen*************
-************************************/
-
-body {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.1em;
-  background-color: var(--background);
+*, html {
+    margin:0;
+    padding:0;
 }
 
-nav, h1 {
-  background-color:var(--background);
+header {
+    display:flex;
+    background-color: var(--background);
+    border-style:solid;
+    border-image-width:0 0 2px 0;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgba(0,155,224,0) 5%, rgba(0,155,224,1) 45%, rgba(0,155,224,1) 55%, rgba(0,155,224,0) 95%);
+}
+
+body {  
+    font-family: "Oswald", sans-serif;
 }
 
 img {
-  max-width: 100vw;
+    width: 100%;
 }
 
-header h1 {
-  padding:.5em;
+h2 {
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+article {
+    cursor:pointer;
+    background-color: var(--background);
+}
+
+p {
+    font-weight:400;
+}
+
+a {
+    justify-content:center; 
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text);
 }
 
 button {
-  font-size: 1em;
-  margin-top:3em;
-  padding:1em;
-  border: 1px solid var(--text);
-  box-shadow: 0px 5px 5px  var(--shadow); 
-  background-color: var(--white);
+    font-size: 1em;
+    margin-top:3em;
+    padding:1em;
+    border: 1px solid var(--text);
+    box-shadow: 0px 5px 5px  var(--shadow); 
+    background-color: var(--white);
+    cursor: pointer;
+  }
+
+time { 
+     padding:.6em 0;
+    font-weight:200;
+    color: var(--timedate);
 }
 
-/*voor alle linkjes, heb ik de onderlijning weeggehaald deze past niet bij de huisstijl van de website*/
-a, h1, h2, h3 {
-  display: flex;
-  justify-content:center; 
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--text);
+li {
+    list-style: none;
 }
 
-/***********************************
-*******advertentie carousel*********
-************************************/
-/*main section:first-of-type {
-  
+nav > ul {
+    display: flex;
 }
 
-section:first-of-type > ul > li {
- 
-}*/
-
-/***********************************
-**************sections *************
-************************************/
-section {
-  display:grid;
-  grid-template-columns: 1fr 1fr;
+section:nth-of-type(2) h3, section:nth-of-type(3) h3{
+    font-weight: 400;
+    text-transform: none;
 }
 
-section:nth-of-type(7) img {
-  height:30%;
+/******kleinere mobiel******/
+@media only screen and (max-width: 991px) {
+    h2 {
+        text-align:center;
+    }
+
+    /*header*/
+    header {
+        justify-content: center;
+        position:sticky;
+        top:0;
+        padding: 1em 0em;
+    }
+
+    /*hamburger menu icon: overwrites button styling*/
+    header > button {
+        display:flex;
+        position: absolute;
+        justify-content: center;
+        margin: .5em 0em 0em 0em;
+        left: 1em;
+        background-color: var(--background);
+        box-shadow: none;
+        width: 1em;
+        height: 1em;
+    }
+    
+    header button > span {
+        position: absolute;
+        width: 1.5em;
+        height: .1em;
+        background-color: var(--text);
+        border-radius: 1em;
+        transition: .5s ease-in-out;
+    }
+    
+    /*hamburger menu icon hover animation*/
+    header > button span:nth-of-type(1){
+        background:transparent;
+        transform: translateX(-1.5em);
+    }
+
+    header > button span:nth-of-type(2){
+        transform: rotate(-45deg);
+    }
+
+    header > button span:nth-of-type(3){
+        transform: rotate(45deg);
+    }
+
+    /*class is aan de header, zodat ik styles kan toevoegen aan de nav en aan de button, omdat ze beide moeten veranderen*/
+    .hidenav > nav {
+        transform: translateX(-100%);
+    }
+
+    .hidenav button > span:nth-of-type(1) {
+        transform: none;
+        background-color: var(--text);
+    }
+
+    .hidenav button > span:nth-of-type(2) {
+        transform: translateY(-.5em);
+    }
+
+    .hidenav button > span:nth-of-type(3) {
+        transform: translateY(.5em);
+    }
+
+    /*navigatie hamburger menu*/
+    nav {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--background);
+        position:fixed;
+        left:0;
+        bottom:0;
+        max-width: 100%;
+        width: 100vw;
+        height: 100vh; 
+        top:4.5em;
+        box-shadow: 0px -1em .5em -1em  var(--shadow); 
+        transition: all .5s ease-in-out;
+    }
+
+    nav > ul {
+        display:flex;
+        flex-direction:column;
+    }
+
+    nav > ul > li {
+        list-style-type: none;
+        padding:.7em;
+        padding: 1em 2em;
+        border-bottom: 2px solid var(--shadow);
+        font-size: 1em;
+    }
+
+    nav > h2 {
+        margin: 1.5em 1em .5em 1em;
+    }
+
+    /*doordat flex op de nav staat en ik hem niet over de hele breedte wilt laten lopen, doe ik een margin top, left & right*/
+    nav > button {
+        margin: 2.6em auto;
+        padding:1em 10em;
+    }
+
+    /*algemeen van de main*/
+    article {
+        box-shadow: 0px 5px 5px  var(--shadow); 
+    }
+
+    section > h2 {
+        margin:2.5em auto;
+        letter-spacing: .2em;
+        border-style:solid;
+        border-image-width:0 0 2px 0;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(90deg, rgba(0,155,224,0) 30%, rgba(0,155,224,1) 45%, rgba(0,155,224,1) 55%, rgba(0,155,224,0) 70%);
+    }
+
+    section> div {
+        display: flex;
+        justify-content: center;
+        flex-wrap:wrap;
+        flex-direction: row;
+        gap:1em;
+    }
+
+    /*News articles*/
+    section:first-of-type article {
+       padding: 1em;
+       display: flex;
+       flex-direction: column;
+       max-width: 45%; 
+       border-style:solid;
+       border-image-width:3px 0 0 0;
+       border-image-slice: 1;
+       border-image-source: linear-gradient(90deg, rgba(0,155,224,1) 25%, rgba(0,240,255,1) 45%, rgba(0,240,255,1) 55%, rgba(0,155,224,1) 75%);
+    }
+    
+    section:first-of-type article > h3 {
+        align-self:center;
+        color: var(--articleh3);
+    }
+    
+    /*section button*/
+    section > button {
+        background-color: var(--background);
+        display: block;
+        width: 60%;
+        margin: 2em auto;
+    }
+
+    /*topic section*/
+    section:nth-of-type(2){
+        padding-top:.5em;
+        padding-bottom:5em;
+        margin-top:3em;
+        background-color:var(--sectionbg);
+    }
+
+    section:nth-of-type(2) article {
+        display:flex;
+        border:none;
+        max-width:90%;
+        margin:1em auto;
+        padding: 1em;
+    }
+
+    section:nth-of-type(2) img {
+        width: 100%;
+        max-width: 192px;
+        height: auto;
+    }
+
+    section >article> section {
+        margin-left:1em;
+    }
+
+    /*video's*/
+    section:nth-of-type(3){
+        background-color:var(--sectionbg);
+        padding:.5em 0 5em 0;
+    }
+
+    section:nth-of-type(3) article {
+        margin:1em auto;
+        flex-wrap: wrap;
+        padding: 0 0 1em 0;
+        flex-direction: column;
+        max-width: 90%; 
+     }
+
+     section:nth-of-type(3) article > h3 {
+         padding: 1em 0 2em 1em;
+     }
+
+     iframe{
+         width: 100%;
+     }
+
+     /*sns ofwel social media*/
+     section:nth-of-type(4) {
+        max-width: 90%;
+        margin: 2em auto;
+        box-shadow: 0px 5px 5px 5px var(--shadow); 
+        padding:0 0 3em 0;
+        overflow: hidden;
+     }
+
+     section:nth-of-type(4) > h2{
+        border-style:none;
+        padding-top:1;
+     }
+
+     section:nth-of-type(4) > img{
+        max-width:  fit-content;
+        padding: 1em;
+     }
+
+     /*official websites*/
+     section:nth-of-type(5) {
+        background-color: var(--sectionbg);
+        padding: 2em 0;
+     }
+
+     section:nth-of-type(5) > ul  {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin: auto 1em;
+        gap:.5em;
+        align-items: center;
+     }
+     
+     /*footer*/
 }
 
-/***********************************
-**************articles *************
-************************************/
-article {
-  box-shadow: 0 0 10px 5px var(--shadow);
-  margin:.25em;
-}
-
-/***********************************
-***Opmaak voor het mobiele scherm***
-************************************/
-/*bron voor schermformaten: https://kinsta.com/blog/responsive-web-design/#media-queries*/
-@media screen and (max-width:767px){
-
-/**********hamburger menu**********/
-  header {
-    position: sticky;
-    top:0;
-    width: 100%;
-    height:100%;
-  }
-
-  /*box-shadow aan de onderkant van de h1 voor het hamburger menu*/
-  header h1 {
-    display:flex;
-    justify-content:center; 
-  }
-
-  nav {
-    position:fixed;
-    box-shadow: 0px -15px 10px -15px  var(--shadow); 
-    top:3.8em;
-    left:0;
-    bottom:0;
-    width:100%;
-    height:100%;
-    margin-top:1em;
-  }
-
-  /*voor in js om de nav te verbergen*/
-  .hideNav {
-    transition: .2s;
-    transition-timing-function: ease-in-out;
-    transform: translateX(-100%);
-  }
-
-  /*language h2 in het hamburger menu*/
-  nav h2 {
-    display:flex;
-    justify-content:center;
-    margin-top: 1.2em; 
-  }
-
-  nav ul li {
-    list-style-type: none;
-    padding:.7em;
-    padding-left:2em;
-    border-bottom: 2px solid var(--shadow);
-  }
-
-  /*div om buttons heen, omdat de nav de parent van button is, maar daar staat display:fixed up en ik wil flex om deze makkelijk te kunnen centreren zonder margins te gebruiken*/
-  div {
-    display:flex;
-    justify-content:center;
-  }
-
-  /*close buttton in het hamburger menu*/
-  nav button {
-    width: 80%;
-    bottom:0;
-  }
-
-   /*********section mobiel *********/
-   
-
-  /*********articles mobiel *********/
-  article {
-    grid-column-start: 1;
-    grid-column-end:3;
-  }
-  
-}
-
-/***********************************
-********tablet/medium scherm********
-************************************/
-@media screen and (min-width:768px) and (max-width:1023px){
+/******grotere mobiel******/
+@media only screen and (min-width: 601px) {
+    /*header*/
+    header {
+        justify-content: center;
+        position:sticky;
+        top:0;
+        padding: 1em 0em;
+        background-color: var(--background);
+    }
 
 }
 
-/***********************************
-********groot/desktop scherm********
-************************************/
-@media screen and (min-width:1024px){
+/******large devices******/
+@media only screen and (min-width: 992px) {
+    /*header*/
+    header {
+        position: sticky;
+        top:0;
+        padding-left: 2.5em;
+        justify-content: flex-start;
+    }
+
+    header > h1 {
+        flex-grow:1;
+    }
+
+    /*mobiele nav verbergen*/
+    header  h2, header ul:nth-of-type(2), header> button{
+        display: none;
+    }
+
+    /*navigatie*/
+    nav {
+        position:relative;
+    }
+
+    nav > ul {
+        padding-right: 2.5em;
+    }
+
+    nav > ul > li {
+        padding:1em;
+    }
+
+    /*grotere schermen hebben geen hamburger menu, dus de close button voor het hamburger menu is niet aanwezig*/
+    nav > button {
+        display:none;
+    }
+
+
+}
+
+/******extra large devices******/
+@media only screen and (min-width: 1200px) {
+    /*header*/
+    header {
+        position: sticky;
+        top:0;
+        padding-left: 2.5em;
+        justify-content: flex-start;
+    }
+
+    header > h1 {
+        flex-grow:1;
+    }
+
+    /*navigatie*/
+    nav > ul {
+        padding-right: 2.5em;
+    }
+
+    nav > ul > li {
+        padding:1em;
+    }
+
+    /*grotere schermen hebben geen hamburger menu, dus de close button voor het hamburger menu is niet aanwezig*/
+    nav > button {
+        display:none;
+    }
+
 
 }
