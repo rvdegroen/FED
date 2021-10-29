@@ -1,33 +1,28 @@
 /*******CUSTOM COLORS******/
+
 :root {
     --text: black;
-    --shadow: rgba(0,0,0,0.1);
+    --shadow: rgba(0, 0, 0, 0.1);
     --background: rgb(252, 252, 252);
     --articleh3: rgb(0, 155, 224);
     --sectionbg: #EEEEEE;
     --timedate: #002c66;
-  }
-
-/******code dat overal geldt******/
-*, *::after, *::before {
-    box-sizing:border-box; 
+    --transparentBorder: rgb(252, 252, 252, .5);
 }
 
-*, html {
-    margin:0;
-    padding:0;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
-header {
-    display:flex;
-    background-color: var(--background);
-    border-style:solid;
-    border-image-width:0 0 2px 0;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(90deg, rgba(0,155,224,0) 5%, rgba(0,155,224,1) 45%, rgba(0,155,224,1) 55%, rgba(0,155,224,0) 95%);
+* {
+    margin: 0;
+    padding: 0;
 }
 
-body {  
+/******Algemeen******/
+body {
     font-family: "Oswald", sans-serif;
 }
 
@@ -45,380 +40,482 @@ h3 {
     text-transform: uppercase;
 }
 
-article {
-    cursor:pointer;
-    background-color: var(--background);
-}
-
 p {
-    font-weight:400;
+    font-weight: 400;
 }
 
 a {
-    justify-content:center; 
+    justify-content: center;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--text);
-}
-
-button {
-    font-size: 1em;
-    margin-top:3em;
-    padding:1em;
-    border: 1px solid var(--text);
-    box-shadow: 0px 5px 5px  var(--shadow); 
-    background-color: var(--white);
-    cursor: pointer;
-  }
-
-time { 
-     padding:.6em 0;
-    font-weight:200;
-    color: var(--timedate);
 }
 
 li {
     list-style: none;
 }
 
-nav > ul {
-    display: flex;
+time {
+    padding: .6em 0;
+    font-weight: 200;
+    color: var(--timedate);
 }
 
-section:nth-of-type(2) h3, section:nth-of-type(3) h3{
+button {
+    font-size: 1em;
+    margin-top: 3em;
+    padding: 1em;
+    border: 1px solid var(--text);
+    box-shadow: 0px 5px 5px var(--shadow);
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+section>h2 {
+    margin: 2.5em auto;
+    display: flex;
+    justify-content: center;
+    letter-spacing: .2em;
+    border-style: solid;
+    border-image-width: 0 0 2px 0;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgba(0, 155, 224, 0) 30%, rgba(0, 155, 224, 1) 45%, rgba(0, 155, 224, 1) 55%, rgba(0, 155, 224, 0) 70%);
+}
+
+section:nth-of-type(2) h3,
+section:nth-of-type(3) h3 {
     font-weight: 400;
     text-transform: none;
 }
 
-/******kleinere mobiel******/
-@media only screen and (max-width: 991px) {
-    h2 {
-        text-align:center;
+/******Code voor mobiel******/
+
+/*Hamburger menu*/
+header {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    padding: 1em 0em;
+    background-color: var(--background);
+    border-style: solid;
+    border-image-width: 0 0 2px 0;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgba(0, 155, 224, 0) 5%, rgba(0, 155, 224, 1) 45%, rgba(0, 155, 224, 1) 55%, rgba(0, 155, 224, 0) 95%);
+}
+
+header>button {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    margin: .5em 0em 0em 0em;
+    left: 1em;
+    background-color: var(--background);
+    box-shadow: none;
+    width: 1em;
+    height: 1em;
+}
+
+header button>span {
+    position: absolute;
+    width: 1.5em;
+    height: .1em;
+    background-color: var(--text);
+    border-radius: 1em;
+    transition: .5s ease-in-out;
+}
+
+/*hamburger menu icon hover animation*/
+header>button span:nth-of-type(1) {
+    background: transparent;
+    transform: translateX(-1.5em);
+}
+
+header>button span:nth-of-type(2) {
+    transform: rotate(-45deg);
+}
+
+header>button span:nth-of-type(3) {
+    transform: rotate(45deg);
+}
+
+/*class is aan de header, zodat ik styles kan toevoegen aan de nav en aan de button, omdat ze beide moeten veranderen*/
+.hidenav>nav {
+    transform: translateX(-100%);
+}
+
+.hidenav button>span:nth-of-type(1) {
+    transform: none;
+    background-color: var(--text);
+}
+
+.hidenav button>span:nth-of-type(2) {
+    transform: translateY(-.5em);
+}
+
+.hidenav button>span:nth-of-type(3) {
+    transform: translateY(.5em);
+}
+
+/*navigatie hamburger menu*/
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    max-width: 100%;
+    width: 100vw;
+    height: 100vh;
+    top: 4.5em;
+    box-shadow: 0px -1em .5em -1em var(--shadow);
+    transition: all .5s ease-in-out;
+}
+
+nav>ul {
+    display: flex;
+    flex-direction: column;
+}
+
+nav>h2 {
+    margin: 1.5em 1em .5em 1em;
+}
+
+nav>ul>li {
+    list-style-type: none;
+    padding: .7em;
+    padding: 1em 2em;
+    border-bottom: 2px solid var(--shadow);
+    font-size: 1em;
+}
+
+/*doordat flex op de nav staat en ik hem niet over de hele breedte wilt laten lopen, doe ik een margin top, left & right*/
+nav>button {
+    margin: 2.6em auto;
+    padding: 1em 10em;
+}
+
+/*Main elements*/
+article {
+    cursor: pointer;
+    background-color: var(--background);
+    box-shadow: 0px 5px 5px var(--shadow);
+}
+
+section>div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1em;
+}
+
+/*News articles*/
+section:first-of-type article {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+    border-style: solid;
+    border-image-width: 3px 0 0 0;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgba(0, 155, 224, 1) 25%, rgba(0, 240, 255, 1) 45%, rgba(0, 240, 255, 1) 55%, rgba(0, 155, 224, 1) 75%);
+}
+
+section:first-of-type article>h3 {
+    align-self: center;
+    color: var(--articleh3);
+}
+
+/*Section button*/
+section>button {
+    background-color: var(--background);
+    display: block;
+    width: 60%;
+    margin: 2em auto;
+}
+
+/*topic section*/
+section:nth-of-type(2) {
+    padding-top: .5em;
+    padding-bottom: .1em;
+    margin-top: 3em;
+    background-color: var(--sectionbg);
+}
+
+/*omdat er al styling op de div zit, wil ik dat deze niet mijn 
+topic section aanpast. De div is voor grotere schermen.*/
+section:nth-of-type(2)>div {
+    display: block;
+}
+
+section:nth-of-type(2) article {
+    display: flex;
+    border: none;
+    max-width: 90%;
+    margin: 1em auto;
+    padding: 1em;
+}
+
+section:nth-of-type(2) img {
+    width: 100%;
+    max-width: 192px;
+    height: auto;
+}
+
+section article section {
+    margin-left: 1em;
+}
+
+/*video's*/
+section:nth-of-type(3) {
+    background-color: var(--sectionbg);
+    padding: .1em 0 5em 0;
+}
+
+/*omdat er al styling op de div zit, wil ik dat deze niet mijn 
+video section aanpast. De div is voor grotere schermen.*/
+section:nth-of-type(3)>div {
+    display: block;
+}
+
+section:nth-of-type(3) article {
+    margin: 1em auto;
+    flex-wrap: wrap;
+    padding: 0 0 1em 0;
+    flex-direction: column;
+    max-width: 90%;
+}
+
+section:nth-of-type(3) article>h3 {
+    padding: 1em 0 2em 1em;
+}
+
+section:nth-of-type(3) article:first-of-type {
+    margin-bottom: 2em;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+/*sns ofwel social media*/
+section:nth-of-type(4) {
+    max-width: 90%;
+    margin: 5em auto 5em auto;
+    box-shadow: 0px 5px 5px 5px var(--shadow);
+    padding: 0 0 3em 0;
+    overflow: hidden;
+}
+
+section:nth-of-type(4)>h2 {
+    border-style: none;
+    padding-top: 1;
+}
+
+section:nth-of-type(4)>img {
+    max-width: fit-content;
+    padding: 1em;
+}
+
+/*official websites*/
+section:nth-of-type(5) {
+    background-color: var(--sectionbg);
+    padding: 2em 0;
+}
+
+section:nth-of-type(5)>ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: auto 1em;
+    gap: .5em;
+    align-items: center;
+}
+
+/*footer*/
+
+footer img {
+    width: 100%;
+    transform: scale(.8);
+}
+
+footer div,
+footer button,
+footer div a,
+footer p {
+    display: flex;
+    justify-content: center;
+    background-color: var(--text);
+    color: var(--background);
+    font-weight: 200;
+}
+
+footer>div:first-of-type {
+    padding: 1em;
+}
+
+.footerMetadata {
+    padding: 1em 0 1em 0;
+    display: flex;
+    gap: 10%;
+    border-top: solid 1px var(--transparentBorder);
+    border-bottom: solid 1px var(--transparentBorder);
+}
+
+.footerMetadata a {
+    text-transform: capitalize;
+}
+
+footer p {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+footer button {
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    padding: .4em 3em;
+    margin: 3.5em auto 0 auto;
+}
+
+.topicVideo {
+    display: flex;
+
+}
+
+/******Code voor grotere mobiel******/
+@media only screen and (min-width: 642px) {
+    section>button {
+        width: 50%;
     }
 
-    /*header*/
-    header {
-        justify-content: center;
-        position:sticky;
-        top:0;
-        padding: 1em 0em;
-    }
-
-    /*hamburger menu icon: overwrites button styling*/
-    header > button {
-        display:flex;
-        position: absolute;
-        justify-content: center;
-        margin: .5em 0em 0em 0em;
-        left: 1em;
-        background-color: var(--background);
-        box-shadow: none;
-        width: 1em;
-        height: 1em;
-    }
-    
-    header button > span {
-        position: absolute;
-        width: 1.5em;
-        height: .1em;
-        background-color: var(--text);
-        border-radius: 1em;
-        transition: .5s ease-in-out;
-    }
-    
-    /*hamburger menu icon hover animation*/
-    header > button span:nth-of-type(1){
-        background:transparent;
-        transform: translateX(-1.5em);
-    }
-
-    header > button span:nth-of-type(2){
-        transform: rotate(-45deg);
-    }
-
-    header > button span:nth-of-type(3){
-        transform: rotate(45deg);
-    }
-
-    /*class is aan de header, zodat ik styles kan toevoegen aan de nav en aan de button, omdat ze beide moeten veranderen*/
-    .hidenav > nav {
-        transform: translateX(-100%);
-    }
-
-    .hidenav button > span:nth-of-type(1) {
-        transform: none;
-        background-color: var(--text);
-    }
-
-    .hidenav button > span:nth-of-type(2) {
-        transform: translateY(-.5em);
-    }
-
-    .hidenav button > span:nth-of-type(3) {
-        transform: translateY(.5em);
-    }
-
-    /*navigatie hamburger menu*/
-    nav {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--background);
-        position:fixed;
-        left:0;
-        bottom:0;
-        max-width: 100%;
-        width: 100vw;
-        height: 100vh; 
-        top:4.5em;
-        box-shadow: 0px -1em .5em -1em  var(--shadow); 
-        transition: all .5s ease-in-out;
-    }
-
-    nav > ul {
-        display:flex;
-        flex-direction:column;
-    }
-
-    nav > ul > li {
-        list-style-type: none;
-        padding:.7em;
-        padding: 1em 2em;
-        border-bottom: 2px solid var(--shadow);
-        font-size: 1em;
-    }
-
-    nav > h2 {
-        margin: 1.5em 1em .5em 1em;
-    }
-
-    /*doordat flex op de nav staat en ik hem niet over de hele breedte wilt laten lopen, doe ik een margin top, left & right*/
-    nav > button {
-        margin: 2.6em auto;
-        padding:1em 10em;
-    }
-
-    /*algemeen van de main*/
-    article {
-        box-shadow: 0px 5px 5px  var(--shadow); 
-    }
-
-    section > h2 {
-        margin:2.5em auto;
-        letter-spacing: .2em;
-        border-style:solid;
-        border-image-width:0 0 2px 0;
-        border-image-slice: 1;
-        border-image-source: linear-gradient(90deg, rgba(0,155,224,0) 30%, rgba(0,155,224,1) 45%, rgba(0,155,224,1) 55%, rgba(0,155,224,0) 70%);
-    }
-
-    section> div {
-        display: flex;
-        justify-content: center;
-        flex-wrap:wrap;
-        flex-direction: row;
-        gap:1em;
-    }
-
-    /*News articles*/
-    section:first-of-type article {
-       padding: 1em;
-       display: flex;
-       flex-direction: column;
-       max-width: 45%; 
-       border-style:solid;
-       border-image-width:3px 0 0 0;
-       border-image-slice: 1;
-       border-image-source: linear-gradient(90deg, rgba(0,155,224,1) 25%, rgba(0,240,255,1) 45%, rgba(0,240,255,1) 55%, rgba(0,155,224,1) 75%);
-    }
-    
-    section:first-of-type article > h3 {
-        align-self:center;
-        color: var(--articleh3);
-    }
-    
-    /*section button*/
-    section > button {
-        background-color: var(--background);
-        display: block;
-        width: 60%;
-        margin: 2em auto;
-    }
-
-    /*topic section*/
-    section:nth-of-type(2){
-        padding-top:.5em;
-        padding-bottom:5em;
-        margin-top:3em;
-        background-color:var(--sectionbg);
-    }
-
-    section:nth-of-type(2) article {
-        display:flex;
-        border:none;
-        max-width:90%;
-        margin:1em auto;
-        padding: 1em;
-    }
-
-    section:nth-of-type(2) img {
-        width: 100%;
-        max-width: 192px;
-        height: auto;
-    }
-
-    section >article> section {
-        margin-left:1em;
-    }
-
-    /*video's*/
-    section:nth-of-type(3){
-        background-color:var(--sectionbg);
-        padding:.5em 0 5em 0;
-    }
-
-    section:nth-of-type(3) article {
-        margin:1em auto;
-        flex-wrap: wrap;
-        padding: 0 0 1em 0;
-        flex-direction: column;
-        max-width: 90%; 
-     }
-
-     section:nth-of-type(3) article > h3 {
-         padding: 1em 0 2em 1em;
-     }
-
-     iframe{
-         width: 100%;
-     }
-
-     /*sns ofwel social media*/
-     section:nth-of-type(4) {
-        max-width: 90%;
-        margin: 2em auto;
-        box-shadow: 0px 5px 5px 5px var(--shadow); 
-        padding:0 0 3em 0;
-        overflow: hidden;
-     }
-
-     section:nth-of-type(4) > h2{
-        border-style:none;
-        padding-top:1;
-     }
-
-     section:nth-of-type(4) > img{
-        max-width:  fit-content;
-        padding: 1em;
-     }
-
-     /*official websites*/
-     section:nth-of-type(5) {
-        background-color: var(--sectionbg);
-        padding: 2em 0;
-     }
-
-     section:nth-of-type(5) > ul  {
+    /*news section*/
+    section:nth-of-type(1)>div {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        margin: auto 1em;
-        gap:.5em;
-        align-items: center;
-     }
-     
-     /*footer*/
-     footer {
-         display: flex;
-         justify-content: center;
-         background-color: var(--text);
-         color: var(--background);
-     }
+        grid-gap: 1em;
+        margin: 2em;
+    }
 
-     footer img{
-        width: 100%;
+    /*op telefoon is de max-width van een article 45% vanwege flexbox, deze moet 
+        overgeschreven worden met 100% om grid te gebruiken*/
+    section:first-of-type article {
+        max-width: 100%;
     }
 }
 
-/******grotere mobiel******/
-@media only screen and (min-width: 601px) {
-    /*header*/
-    header {
-        justify-content: center;
-        position:sticky;
-        top:0;
-        padding: 1em 0em;
-        background-color: var(--background);
+@media only screen and (min-width: 977px) {
+
+    /*news section*/
+    section:nth-of-type(1) article {
+        padding-bottom: 3em;
     }
 
+    section:nth-of-type(1)>div {
+        margin: 3em;
+    }
+
+    /*Topic section*/
+    section:nth-of-type(2) {
+        margin-left: 0;
+    }
+
+    /*Video section*/
+    section:nth-of-type(3) {
+        margin-right: 0;
+    }
 }
 
-/******large devices******/
-@media only screen and (min-width: 992px) {
-    /*header*/
-    header {
-        position: sticky;
-        top:0;
-        padding-left: 2.5em;
-        justify-content: flex-start;
-    }
-
-    header > h1 {
-        flex-grow:1;
-    }
+@media only screen and (min-width: 1221px) {
 
     /*mobiele nav verbergen*/
-    header  h2, header ul:nth-of-type(2), header> button{
+    header h2,
+    header ul:nth-of-type(2),
+    header button {
         display: none;
     }
 
-    /*navigatie*/
-    nav {
-        position:relative;
-    }
-
-    nav > ul {
-        padding-right: 2.5em;
-    }
-
-    nav > ul > li {
-        padding:1em;
-    }
-
-    /*grotere schermen hebben geen hamburger menu, dus de close button voor het hamburger menu is niet aanwezig*/
-    nav > button {
-        display:none;
-    }
-
-
-}
-
-/******extra large devices******/
-@media only screen and (min-width: 1200px) {
     /*header*/
     header {
-        position: sticky;
-        top:0;
         padding-left: 2.5em;
         justify-content: flex-start;
     }
 
-    header > h1 {
-        flex-grow:1;
+    header>h1 {
+        flex-grow: 1;
     }
 
-    /*navigatie*/
-    nav > ul {
-        padding-right: 2.5em;
+    /*navigatie desktop*/
+    header>nav {
+        position: relative;
+        width: auto;
+        height: auto;
+        top: auto;
+        box-shadow: none;
     }
 
-    nav > ul > li {
-        padding:1em;
+    nav>ul {
+        display: flex;
+        flex-direction: row;
     }
 
-    /*grotere schermen hebben geen hamburger menu, dus de close button voor het hamburger menu is niet aanwezig*/
-    nav > button {
-        display:none;
+    nav>ul>li {
+        border-bottom: none;
     }
+
+    /*voor mijn hamburger menu en js heb ik transform gebruikt, 
+    bij desktop heb ik dit niet nodig*/
+    .hidenav>nav {
+        transform: none;
+    }
+
+    /*news section*/
+    section:nth-of-type(1)>div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+        margin: 2em;
+    }
+
+    /*Topic section*/
+    /*div voor de grid*/
+    section:nth-of-type(2)>div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /*width aangepast, anders zijn de elementen te klein op het scherm*/
+    section:nth-of-type(2) article {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    /*Video section*/
+    section:nth-of-type(3)>div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 90%;
+        margin: 0 auto;
+
+    }
+
+    section:nth-of-type(3)>div article {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    /*de eerste article bleek een andere maat te hebben*/
+    section:nth-of-type(3)>div>article:nth-of-type(1) {
+        margin: 0;
+    }
+
 
 
 }
