@@ -38,6 +38,8 @@ In week 4 ben ik van surface plane naar responsive overgestapt, omdat ik onbewus
 https://eu.finalfantasy.com/
 https://eu.finalfantasy.com/topics/314
 Ik wilde oorspronkelijk https://eu.finalfantasy.com/topics/306 doen, maar de website bestaat niet meer.
+Hieronder een screenshot als bewijs:
+<img src="./images/readme/proof.JPG" width="375px" alt="Final Fantasy 14 topics pagina">
 
 #### Screenshot(s) van de eerste pagina (small screen):
 
@@ -47,7 +49,7 @@ Voorpagina van eu.finalfantasy.com
 #### Screenshot(s) van de tweede pagina (small screen):
 
 Topic pagina van 14 october 2021  
-<img src="./images/pagina-2.JPG" width="375px" alt="Final Fantasy 14 topics pagina">
+<img src="./images/readme/pagina-2.JPG" width="375px" alt="Final Fantasy 14 topics pagina">
 
 </details>
 
@@ -217,6 +219,5 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 2. https://eu.finalfantasy.com/topics/314 https://eu.finalfantasy.com/topics/314
 3. https://css-tricks.com/snippets/css/a-guide-to-flexbox/ vaak gebruikt als ik iets vergeten was met flexbox
 4. https://www.codegrepper.com/code-examples/css/gradient+border+bottom+css ik kwam niet uit hoe ik mijn gradient border bottom moest doen.
-5. https://www.pngitem.com/middle/JwmoRm_meteor-clipart-final-fantasy-final-fantasy-14-png/ zelf in figma overgetrokken voor favicon.
 
 </details>
