@@ -339,8 +339,8 @@ section:nth-of-type(5)>ul {
 /*footer*/
 
 footer img {
-    width: 100%;
-    transform: scale(.8);
+    width: auto;
+    height: 90%;
 }
 
 footer div,
