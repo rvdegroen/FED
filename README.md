@@ -47,7 +47,7 @@ Voorpagina van eu.finalfantasy.com
 #### Screenshot(s) van de tweede pagina (small screen):
 
 Topic pagina van 14 october 2021  
-<img src="./images/readme/pagina-2.JPG" width="375px" alt="Final Fantasy 14 topics pagina">
+<img src="./images/pagina-2.JPG" width="375px" alt="Final Fantasy 14 topics pagina">
 
 </details>
 
