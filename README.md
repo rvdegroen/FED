@@ -217,5 +217,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 2. https://eu.finalfantasy.com/topics/314 https://eu.finalfantasy.com/topics/314
 3. https://css-tricks.com/snippets/css/a-guide-to-flexbox/ vaak gebruikt als ik iets vergeten was met flexbox
 4. https://www.codegrepper.com/code-examples/css/gradient+border+bottom+css ik kwam niet uit hoe ik mijn gradient border bottom moest doen.
+5. https://www.pngitem.com/middle/JwmoRm_meteor-clipart-final-fantasy-final-fantasy-14-png/ zelf in figma overgetrokken voor favicon.
 
 </details>
