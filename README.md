@@ -60,15 +60,7 @@ Topic pagina van 14 october 2021
 
 ### de hele pagina:
 
-<img src="./images/readme/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
-
-### dynamisch deel (bijv menu):
-
-<img src="./images/readme/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-### wellicht nog een dynamisch deel (bijv filter):
-
-<img src="./images/readme/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+<img src="./images/readme/breakdownschets.jpg" width="375px" alt="breakdown van de hele pagina">
 
 </details>
 
