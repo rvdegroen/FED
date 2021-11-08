@@ -38,8 +38,6 @@ In week 4 ben ik van surface plane naar responsive overgestapt, omdat ik onbewus
 https://eu.finalfantasy.com/
 https://eu.finalfantasy.com/topics/314
 Ik wilde oorspronkelijk https://eu.finalfantasy.com/topics/306 doen, maar de website bestaat niet meer.
-Hieronder een screenshot als bewijs:
-<img src="./images/readme/proof.JPG" width="375px" alt="Final Fantasy 14 topics pagina">
 
 #### Screenshot(s) van de eerste pagina (small screen):
 
@@ -60,7 +58,15 @@ Topic pagina van 14 october 2021
 
 ### de hele pagina:
 
-<img src="./images/readme/breakdownschets.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="./images/readme/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+
+### dynamisch deel (bijv menu):
+
+<img src="./images/readme/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+
+### wellicht nog een dynamisch deel (bijv filter):
+
+<img src="./images/readme/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 

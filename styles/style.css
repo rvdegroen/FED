@@ -3,11 +3,13 @@
 :root {
     --text: black;
     --shadow: rgba(0, 0, 0, 0.1);
-    --background: rgb(252, 252, 252);
+    --background: rgb(255, 255, 255);
     --articleh3: rgb(0, 155, 224);
     --sectionbg: #EEEEEE;
     --timedate: #002c66;
     --transparentBorder: rgb(252, 252, 252, .5);
+    --topicsNav: #737373;
+    --topicsh3: #111;
 }
 
 *,
@@ -515,7 +517,136 @@ footer button {
     section:nth-of-type(3)>div>article:nth-of-type(1) {
         margin: 0;
     }
+}
 
+/******Code die specifiek is gericht voor mijn tweede site (topics)******/
+/******mobiel******/
 
+/*bovenaan de navigatie*/
+.topics2 ul {
+    display: flex;
+    margin: 1em 0 0 2em;
+}
 
+.topics2 a {
+    color: var(--topicsNav);
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.topics2 li:last-child a {
+    text-transform: none;
+}
+
+.topics2 ul:first-of-type li:not(:last-of-type)::after {
+    content: '\000BB';
+    margin: 0 1em;
+}
+
+/*topics section*/
+.topics h2 {
+    border: 0;
+    margin: 1.2em auto;
+    font-size: 2em;
+}
+
+.topics {
+    margin: 0 auto;
+    font-size: 1.8em;
+    margin-bottom: 3em;
+}
+
+.topics time {
+    color: var(--timedate);
+    padding: 0.6em 0 0 0;
+}
+
+.topics p {
+    font-weight: 400;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--topicsh3);
+    letter-spacing: .05em;
+    line-height: 1.8em;
+    padding: 2.5em 0 0 0;
+}
+
+.topics p:nth-of-type(6) {
+    font-size: .5em;
+    padding: 2.5em 0 2.5em 0;
+}
+
+.topics p:nth-of-type(7) {
+    padding: 0;
+}
+
+/*topics article (main content)*/
+section.topics article {
+    margin: 0 auto;
+    background-color: var(--background);
+    border: 0;
+    box-shadow: 0px 0px 5px var(--shadow);
+    max-width: 90%;
+}
+
+section.topics article h3 {
+    color: var(--topicsh3);
+    text-transform: none;
+    align-self: unset;
+    padding: .8em 0;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+h4 {
+    color: var(--topicsh3);
+    display: flex;
+    justify-content: center;
+    padding: 1.5em;
+    letter-spacing: .08em;
+}
+
+/*topics button*/
+.topics button {
+    margin: 2em 0 2em 0;
+    margin-top: 2em;
+}
+
+/*de afbeeldingen onderaan de pagina, boven de footer*/
+.topics2 ul:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*groter scherm*/
+@media only screen and (min-width: 1050px) {
+    .topics {
+        max-width: 80%;
+    }
+
+    .topics img:first-of-type {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .topics article {
+        padding: 1.5em 2em 2em 2em !important;
+    }
+
+    /*de afbeeldingen onderaan de pagina, boven de footer*/
+    .topics2 ul:nth-of-type(2) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/*desktop*/
+@media only screen and (min-width: 1700px) {
+    .topics {
+        max-width: 60%;
+    }
+
+    .topics article {
+        padding: 1.5em 3em 3em 3em !important;
+    }
 }
