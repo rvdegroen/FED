@@ -56,19 +56,13 @@ Topic pagina van 14 october 2021
 <details>
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
-### de hele pagina:
+### Eerste pagina:
 
-<img src="./images/readme/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="./images/readme/breakdownschets.jpg" width="375px" alt="breakdown van de hele eerste pagina">
 
-### dynamisch deel (bijv menu):
+### Tweede pagina:
 
-<img src="./images/readme/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-### wellicht nog een dynamisch deel (bijv filter):
-
-<img src="./images/readme/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
-
-</details>
+<img src="./images/readme/breakdownschets2.jpg" width="375px" alt="breakdown van de hele pagina">
 
 ## Voortgang (week 1 zonder gesprek)
 
