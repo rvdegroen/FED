@@ -10,6 +10,8 @@
     --transparentBorder: rgb(252, 252, 252, .5);
     --topicsNav: #737373;
     --topicsh3: #111;
+    --buttonHover: rgba(95, 95, 95, 0.133);
+    --buttonActive: rgba(19, 19, 19, 0.356);
 }
 
 *,
@@ -21,6 +23,61 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+/******user action pseudo classes******/
+/******HOVER STATE******/
+
+/*als er geen bottom border is, dan wordt de height van de nav veranderd. Ik maak dus standaard 
+een border bottom met de achtergrond kleur, zoda je deze niet ziet. */
+header ul>li {
+    border-bottom: 2px solid var(--background) !important;
+}
+
+header ul>li:hover {
+    border-bottom: 2px solid var(--articleh3) !important;
+}
+
+button:hover {
+    background-color: var(--buttonHover);
+}
+
+/*button in de footer*/
+footer>button:hover {
+    background-color: var(--text);
+    color: #eeeeee62;
+}
+
+footer>div:nth-of-type(1) img:hover {
+    opacity: 50%
+}
+
+/*footer moet ook border bottom hebben met de achtergrond kleur anders veranderd de height van de footer als je hovered*/
+footer>div:nth-of-type(2) a {
+    border-bottom: 2px solid var(--text);
+}
+
+footer>div:nth-of-type(2) a:hover {
+    border-bottom: solid 2px white;
+}
+
+/******ACTIVE STATE******/
+ul>li a:active {
+    opacity: 50%;
+}
+
+button:active {
+    background-color: var(--buttonActive);
+}
+
+footer>div:nth-of-type(2) a:active {
+    opacity: 50%;
+}
+
+
+/*topics pagina moet geen cursor pointer hebben over het hele article element*/
+.topics article {
+    cursor: default;
 }
 
 /******Algemeen******/

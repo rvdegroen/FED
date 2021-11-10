@@ -128,29 +128,38 @@ Ik had problemen, wanneer ik een afbeelding in mijn HTML toevoegde. Gelukkig is 
 
 Lijst met je bevindingen die in de test naar voren kwamen:
 
-#### Titel eerste bevinding
+1. Begint met de content, maar slaat de main element over
+2. Ziet het hamburger menu niet. Ik denk dat het komt, omdat ik in mijn javascript heb geschreven dat je het hamburger menu in het begin niet zichtbaar in beeld is. Ik zou dit op dezelfde manier kunnen oplossen, maar dan zie je wel als eerst het hamburger menu als je op de pagina komt.
+3. Sommige afbeeldingen zijn niet duidelijk te begrijpen in de alt tekst, tenzij je misschien een fan bent van Final Fantasy. De oplossing is om de alt tekst aan te passen en als eerse "afbeelding van" in de alt tekst te zetten. Ik heb dit ook aangepast in mijn ontwerp.
+4. Mijn pagina is nog goed te zien voor diegene die kleurenblind zijn.
+5. Door de diabetes bril waren sommige letters wat moeilijker te lezen, met name de kleinere letters.
 
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Begint met de content van de pagina
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Het was in het begin ontzettend verwarrend, omdat heel veel van de pagina werd geskipped, zoals de nav, de header. De screenreader begon gelijk met de content (news, topics, video, sns) maar skipte tekst in de main tag en de headings.
 
-#### Titel tweede bevinding.
+#### Hamburger menu blijft "onzichtbaar" voor de screenreader
 
-Hier korte omschrijving (met indien nodig een afbeelding)
+Het hamburger menu werd altijd overgeslagen. Ik heb javascript gebruikt om mijn hamburger menu te verbergen van het zichtbare scherm. Mijn vermoeden is dat de screenreader daarom mijn hamburger menu niet ziet.
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Een oplossing zou kunnen zijn dat het hamburger menu zichtbaar is in het begin, waardoor de screenreader deze wel zal zien of de gebruiker gebruikt de website op desktop, dan is het hamburger menu niet eens nodig.
 
-#### Titel volgende bevinding.
+#### De "alt" tekst van advertentie afbeeldingen zijn niet duidelijk genoeg
 
-Hier korte omschrijving (met indien nodig een afbeelding)
+Ik heb de tekst dat op advertentie afbeeldingen stond in mijn alt tekst geschreven. Voor mijn buurvrouw waar ik mee in de klas heb getest, was het zeer onduidelijk wat er werd opgenoemd.
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Ik heb dit probleem verholpen door in de alt tekst van elke afbeelding "afbeelding van.." gezet. Hierdoor zou het duidelijker voor de gebruiker moeten zijn dat het om een afbeelding gaat over het gene dat verder in de alt tekst staat.
 
-#### Titel nog een bevinding.
+#### Kleurenblindheid is geen probleem
 
-Hier korte omschrijving (met indien nodig een afbeelding)
+In de les hebben wij getest met een geel brilletje. Alles was hier nog duidelijk in te zien. Hiervoor is geen oplossing nodig.
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+#### Kleinere letters zijn moeilijker te lezen met de "biabetes bril"
+
+Doordat er op sommige delen van de pagina een kleiner lettertype is gebruikt, is dit soms wat moeilijker te lezen op de diabetes bril.
+
+De oplossing hiervoor zou zijn om het lettertype te vergroten. Dit heb ik dan ook vooral bij de 2e pagina aangepast.
+<img src="./images/readme/diabetesbril.jpg" width="375px" alt="afbeelding van diabetes test bril">
 
 </details>
 
@@ -194,9 +203,19 @@ Tijdens het gespreek is ook nog gezegd dat ik mijn carousel pas helemaal op het 
 
 Ik ga dus voor de herkansing en hieronder zullen de screenshots staan van mijn uiteindelijke resultaat.
 
+### Herkansing
+
+De tweede pagina was veel makkelijker te maken. Ik heb wel echt classes hiervoor moeten gebruiken, omdat ik de styling van mijn tweede pagina anders moest maken dan de eerste pagina. Ik heb later in het proces ook veel meer dingen van de pagina weg gelaten, om de opdracht wat makkelijker voor mezelf te maken (ik heb momenteel meer dan 600 lines aan CSS code).
+
+Ik heb het gevoel gehad tijdens deze opdracht dat ik wel veel meer beperkt moest werken, juist doordat ik minimaal classes en divs mag gebruiken. Met deze opdracht ben ik erachter gekomen, dat het gebruik van CSS selectoren, zoals "nth-of-type" niet praktisch is. Ook ben ik erachter gekomen hoe ik een "back to top" button kan maken en hoe ik een button kan linken aan een andere HTML pagina, i.p.v. een anchor element te gebruiken. Ik heb deze opdracht geleerd hoe ik een hamburger menu kan maken en hoe ik grid kan gebruiken.
+
+Verder vond ik het testen van mijn website op een screenreader interessant. Ik denk dat ik dit vaker ga doen, omdat het een hele andere ervaring is van je website.
+
 ### Screenshot(s)
 
 hier screenshot(s) van je eindresultaat
+
+<img src="./images/readme/breakdownschets.jpg" width="375px" alt="eindresultaat website">
 
 </details>
 
