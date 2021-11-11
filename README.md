@@ -215,7 +215,25 @@ Verder vond ik het testen van mijn website op een screenreader interessant. Ik d
 
 hier screenshot(s) van je eindresultaat
 
-<img src="./images/readme/breakdownschets.jpg" width="375px" alt="eindresultaat website">
+Eerste pagina:
+
+<img src="./images/readme/einres1.jpg" width="375px" alt="breakdown van de hele pagina">
+
+<img src="./images/readme/einres2.jpg" width="375px" alt="breakdown van de hele pagina">
+
+<img src="./images/readme/einres3.jpg" width="375px" alt="breakdown van de hele pagina">
+
+<img src="./images/readme/einres4.jpg" width="375px" alt="breakdown van de hele pagina">
+
+<img src="./images/readme/einres5.jpg" width="375px" alt="breakdown van de hele pagina">
+
+Tweede pagina:
+
+<img src="./images/readme/einres6.jpg" width="375px" alt="breakdown van de hele pagina">
+
+<img src="./images/readme/einres7.jpg" width="375px" alt="breakdown van de hele pagina">
+
+<img src="./images/readme/einres8.jpg" width="375px" alt="breakdown van de hele pagina">
 
 </details>
 
