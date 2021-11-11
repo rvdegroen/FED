@@ -32,17 +32,23 @@
 een border bottom met de achtergrond kleur, zoda je deze niet ziet. */
 header ul>li {
     border-bottom: 2px solid var(--background) !important;
+    transition: border-bottom ease-in-out .2s;
 }
 
 header ul>li:hover {
     border-bottom: 2px solid var(--articleh3) !important;
+    transition: all ease-in-out .2s;
+}
+
+/*als je muis niet meer hovered over de button moet het een ease out hebben van de achtergrond kleur*/
+button {
+    transition: background-color ease-in-out .2s;
 }
 
 button:hover {
     background-color: var(--buttonHover);
 }
 
-/*button in de footer*/
 footer>button:hover {
     background-color: var(--text);
     color: #eeeeee62;
@@ -50,6 +56,29 @@ footer>button:hover {
 
 footer>div:nth-of-type(1) img:hover {
     opacity: 50%
+}
+
+/*als je muis niet meer hovered over de article moet het een ease out hebben van de achtergrond kleur*/
+section>div>article {
+    transition: transform ease-in-out .2s;
+}
+
+section:not(:nth-of-type(3))>div>article:hover {
+    transform: translateY(-.5em);
+}
+
+.topics2 ul>li:hover {
+    transition: all ease-in-out .2s;
+    opacity: 50%;
+}
+
+/*als je met je muis er niet meer overheen hovered, moet het een transition out hebben*/
+section:nth-of-type(5) ul>li>a>img {
+    transition: transform ease-in-out .2s;
+}
+
+section:nth-of-type(5) ul>li>a>img:hover {
+    transform: scale(0.8);
 }
 
 /*footer moet ook border bottom hebben met de achtergrond kleur anders veranderd de height van de footer als je hovered*/
@@ -62,18 +91,23 @@ footer>div:nth-of-type(2) a:hover {
 }
 
 /******ACTIVE STATE******/
+section:not(:nth-of-type(3))>div>article:active {
+    color: var(--articleh3);
+}
+
 ul>li a:active {
     opacity: 50%;
+    transition: all ease-in-out .2s;
 }
 
 button:active {
     background-color: var(--buttonActive);
+    color: var(--background);
 }
 
 footer>div:nth-of-type(2) a:active {
     opacity: 50%;
 }
-
 
 /*topics pagina moet geen cursor pointer hebben over het hele article element*/
 .topics article {
@@ -161,6 +195,7 @@ header {
     border-image-width: 0 0 2px 0;
     border-image-slice: 1;
     border-image-source: linear-gradient(90deg, rgba(0, 155, 224, 0) 5%, rgba(0, 155, 224, 1) 45%, rgba(0, 155, 224, 1) 55%, rgba(0, 155, 224, 0) 95%);
+    z-index: 2;
 }
 
 header>button {
@@ -260,6 +295,7 @@ article {
     cursor: pointer;
     background-color: var(--background);
     box-shadow: 0px 5px 5px var(--shadow);
+    z-index: 1;
 }
 
 section>div {
