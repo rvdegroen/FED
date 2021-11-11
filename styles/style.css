@@ -28,13 +28,6 @@
 /******user action pseudo classes******/
 /******HOVER STATE******/
 
-/*als er geen bottom border is, dan wordt de height van de nav veranderd. Ik maak dus standaard 
-een border bottom met de achtergrond kleur, zoda je deze niet ziet. */
-header ul>li {
-    border-bottom: 2px solid var(--background) !important;
-    transition: border-bottom ease-in-out .2s;
-}
-
 header ul>li:hover {
     border-bottom: 2px solid var(--articleh3) !important;
     transition: all ease-in-out .2s;
@@ -541,6 +534,14 @@ footer button {
 
     header>h1 {
         flex-grow: 1;
+    }
+
+    /*om de hover state een onderbalke te geven en de nav balk niet van height te laten veranderen, 
+    heb ik een border bottom gegeven, waardoor de kleur kan worden veranderd in de hover en de height 
+    niet aangepast wordt*/
+    header ul>li {
+        border-bottom: 2px solid var(--background) !important;
+        transition: border-bottom ease-in-out .2s;
     }
 
     /*navigatie desktop*/
