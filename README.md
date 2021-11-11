@@ -217,23 +217,23 @@ hier screenshot(s) van je eindresultaat
 
 Eerste pagina:
 
-<img src="./images/readme/einres1.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="./images/readme/einres1.jpg" width="375px" alt="screenshot eindresultaat 1">
 
-<img src="./images/readme/einres2.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="./images/readme/einres2.jpg" width="375px" alt="screenshot eindresultaat 2">
 
-<img src="./images/readme/einres3.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="./images/readme/einres3.jpg" width="375px" alt="screenshot eindresultaat 3">
 
-<img src="./images/readme/einres4.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="./images/readme/einres4.jpg" width="375px" alt="screenshot eindresultaat 4">
 
-<img src="./images/readme/einres5.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="./images/readme/einres5.jpg" width="375px" alt="screenshot eindresultaat 5">
 
 Tweede pagina:
 
-<img src="./images/readme/einres6.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="./images/readme/einres6.jpg" width="375px" alt="screenshot eindresultaat 6">
 
-<img src="./images/readme/einres7.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="./images/readme/einres7.jpg" width="375px" alt="screenshot eindresultaat 7">
 
-<img src="./images/readme/einres8.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="./images/readme/einres8.jpg" width="375px" alt="screenshot eindresultaat 8">
 
 </details>
 
