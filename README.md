@@ -229,11 +229,11 @@ Eerste pagina:
 
 Tweede pagina:
 
-<img src="./images/readme/einres6.jpg" width="375px" alt="screenshot eindresultaat 6">
+<img src="./images/readme/einres6.JPG" width="375px" alt="screenshot eindresultaat 6">
 
-<img src="./images/readme/einres7.jpg" width="375px" alt="screenshot eindresultaat 7">
+<img src="./images/readme/einres7.JPG" width="375px" alt="screenshot eindresultaat 7">
 
-<img src="./images/readme/einres8.jpg" width="375px" alt="screenshot eindresultaat 8">
+<img src="./images/readme/einres8.JPG" width="375px" alt="screenshot eindresultaat 8">
 
 </details>
 
