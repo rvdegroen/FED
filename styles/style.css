@@ -443,7 +443,6 @@ footer button {
 
 .topicVideo {
     display: flex;
-
 }
 
 /******Code voor grotere mobiel******/
@@ -537,7 +536,8 @@ footer button {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 1em;
-        margin: 2em;
+        margin: 0 auto;
+        max-width: 70%;
     }
 
     /*Topic section*/
@@ -545,7 +545,7 @@ footer button {
     section:nth-of-type(2)>div {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        max-width: 90%;
+        max-width: 70%;
         margin: 0 auto;
     }
 
